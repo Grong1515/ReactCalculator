@@ -2,12 +2,12 @@ import React from 'react';
 import Calculator from './calculator/Calculator';
 import 'whatwg-fetch'
 
-function AppModel() {
+function AppModel(props) {
   return (
     <div>
       <h1>JS Calculator!</h1>
       <div>
-        <Calculator width="20%" onSubmit={this.props.handleCalculation} />
+        <Calculator width="20%" onSubmit={props.handleCalculation} />
       </div>
       <div>
         <ul>

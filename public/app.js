@@ -9611,7 +9611,8 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(AppModel, {
-      calculations: this.state.calculations });
+      calculations: this.state.calculations,
+      handleCalculation: this.handleCalculation });
   }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = App;
