@@ -22,9 +22,6 @@ function Container (props) {
 function Outputs (props) {
   return (
     <Container>
-      <div>
-        <input type="hidden" id="calcInput" onChange={props.handleTyping}/>
-      </div>
       <Row>
         <Cell
           className="formula"
@@ -103,9 +100,10 @@ function Buttons (props) {
   );
 }
 
-function CalcModel(props) {
+export default function CalcModel(props) {
   return (
-    <div className="calc calculator" style={props.style}>
+    <div className="calc calculator" style={props.style}
+      tabIndex="0" onKeyDown={props.onKeyPress}>
       <Outputs
         formula={props.formula}
         input={props.input} />
@@ -113,5 +111,3 @@ function CalcModel(props) {
     </div>
   );
 }
-
-export default CalcModel;

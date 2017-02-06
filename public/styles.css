@@ -5,6 +5,10 @@
   min-width: 12em;
   font-family: Verdana, Geneva, sans-serif;
 }
+.calc.calcutor:focus {
+  background-color: Blue;
+  outline: 1px solid red;
+}
 .calc.container {
 }
 .calc.row{

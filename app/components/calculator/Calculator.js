@@ -2,6 +2,7 @@ import React from 'react';
 import CalcModel from './view';
 import CalculatorReducer, {initialState} from './reducer';
 import {actionType, actionFromCode} from './actions';
+import handleInput from './inputHandler';
 
 
 export default class Calculator extends React.Component {
@@ -9,16 +10,26 @@ export default class Calculator extends React.Component {
     super(props);
     this.state = initialState;
     this.handleClick = this.handleClick.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   updateState (code) {
-    let newState = CalculatorReducer(this.state, actionFromCode(code));
+    if (!code) return null;
     this.setState(CalculatorReducer(this.state, actionFromCode(code)));
   }
 
   handleClick (code) {
-    if (!code) return null;
     return this.updateState(code);
+  }
+
+  handleKeyPress (e) {
+
+    if (e.key == 'Escape') {
+      document.activeElement.blur();
+    }
+    let code = handleInput(e.key);
+    if (code != null) e.preventDefault();
+    this.updateState(code);
   }
 
   componentWillUpdate (nextProps, nextState) {
@@ -29,6 +40,7 @@ export default class Calculator extends React.Component {
 
   render () {
     return <CalcModel onClick={this.handleClick}
+      onKeyPress={this.handleKeyPress}
       formula={this.state.string + (this.state.operation
                       ? ' ' + this.state.operation : '')}
       input={this.state[this.state.input]}
