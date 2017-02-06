@@ -7,6 +7,7 @@ export const initialState = {
   string: '',
   input: 'n1',
   lastOperation: '',
+  lastEval: '',
 };
 
 export default function CalculatorReducer (state = initialState, action) {
@@ -55,8 +56,10 @@ export default function CalculatorReducer (state = initialState, action) {
       }
       break;
     case actions.CALCULATE:
+      if (!state.n1) return state;
       if (!state.operation) return Object.assign({}, state, {
         n1: eval(state.n1 + state.lastOperation).toString(),
+        lastEval: state.n1 + state.lastOperation,
       });
       let operation = state.operation
                         + (state.n2 === '' ? state.n1 : state.n2);
@@ -68,6 +71,7 @@ export default function CalculatorReducer (state = initialState, action) {
         string: '',
         operation: '',
         lastOperation: operation,
+        lastEval: state.string + operation,
       });
       break;
     case actions.TYPE_C:

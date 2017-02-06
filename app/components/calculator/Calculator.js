@@ -21,6 +21,12 @@ export default class Calculator extends React.Component {
     return this.updateState(code);
   }
 
+  componentWillUpdate (nextProps, nextState) {
+    if (nextState && this.state.lastEval !== nextState.lastEval) {
+      this.props.onEval(nextState.lastEval);
+    }
+  }
+
   render () {
     return <CalcModel onClick={this.handleClick}
       formula={this.state.string + (this.state.operation

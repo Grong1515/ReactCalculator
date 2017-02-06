@@ -66,8 +66,8 @@ function Buttons (props) {
     [
       {text: 'CE', code: actionCodes.CE},
       {text: 'C', code: actionCodes.C},
-      {text: '<-', code: actionCodes.BS},
-      {text: '/', code: actionCodes.DIVISION},
+      {text: '⇐', code: actionCodes.BS},
+      {text: '÷', code: actionCodes.DIVISION},
     ],
     [
       {text: 7, code: actionCodes[7]},
@@ -88,7 +88,7 @@ function Buttons (props) {
       {text: '+', code: actionCodes.SUM},
     ],
     [
-      {text: '+/-', code: actionCodes.SGN_CH},
+      {text: '±', code: actionCodes.SGN_CH},
       {text: 0, code: actionCodes[0]},
       {text: '.', code: actionCodes.DOT},
       {text: '=', code: actionCodes.EQ},
