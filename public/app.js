@@ -9548,7 +9548,7 @@ module.exports = ReactPropTypesSecret;
 
 
 
-function AppModel() {
+function AppModel(props) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     null,
@@ -9560,7 +9560,7 @@ function AppModel() {
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__calculator_Calculator__["a" /* default */], { width: '20%', onSubmit: this.props.handleCalculation })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__calculator_Calculator__["a" /* default */], { width: '20%', onSubmit: props.handleCalculation })
     ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
@@ -9568,7 +9568,7 @@ function AppModel() {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'ul',
         null,
-        this.props.calculations.map(elem => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        props.calculations.map(elem => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'li',
           null,
           JSON.stringify(elem)

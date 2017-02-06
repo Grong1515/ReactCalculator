@@ -11,7 +11,7 @@ function AppModel(props) {
       </div>
       <div>
         <ul>
-          {this.props.calculations.map((elem) => <li>{JSON.stringify(elem)}</li>)}
+          {props.calculations.map((elem) => <li>{JSON.stringify(elem)}</li>)}
         </ul>
       </div>
     </div>
