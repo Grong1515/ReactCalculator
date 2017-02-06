@@ -39,7 +39,7 @@ function Outputs (props) {
 function CalcButton (props) {
 
   return <Cell
-    className='button'
+    className={'button ' + props.className }
     text={props.text}
     code={props.code || null}
     onClick={props.onClick || null} />;
@@ -51,6 +51,7 @@ function CalcButtonRow (props) {
       props.onClick(b.code)
     }
     return <CalcButton text={b.text}
+      className={b.class}
       code={b.code} onClick={onClick}
       key={props.row + i} />;
   });
@@ -61,34 +62,34 @@ function Buttons (props) {
 
   const buttonsList = [
     [
-      {text: 'CE', code: actionCodes.CE},
-      {text: 'C', code: actionCodes.C},
-      {text: '⇐', code: actionCodes.BS},
-      {text: '÷', code: actionCodes.DIVISION},
+      {text: 'CE', code: actionCodes.CE, class: 'utility'},
+      {text: 'C', code: actionCodes.C, class: 'utility'},
+      {text: '⇐', code: actionCodes.BS, class: 'utility'},
+      {text: '÷', code: actionCodes.DIVISION, class: 'utility'},
     ],
     [
-      {text: 7, code: actionCodes[7]},
-      {text: 8, code: actionCodes[8]},
-      {text: 9, code: actionCodes[9]},
-      {text: '*', code: actionCodes.MULT},
+      {text: 7, code: actionCodes[7], class: 'bold'},
+      {text: 8, code: actionCodes[8], class: 'bold'},
+      {text: 9, code: actionCodes[9], class: 'bold'},
+      {text: '*', code: actionCodes.MULT, class: 'utility'},
     ],
     [
-      {text: 4, code: actionCodes[4]},
-      {text: 5, code: actionCodes[5]},
-      {text: 6, code: actionCodes[6]},
-      {text: '-', code: actionCodes.SUBTR},
+      {text: 4, code: actionCodes[4], class: 'bold'},
+      {text: 5, code: actionCodes[5], class: 'bold'},
+      {text: 6, code: actionCodes[6], class: 'bold'},
+      {text: '-', code: actionCodes.SUBTR, class: 'utility'},
     ],
     [
-      {text: 1, code: actionCodes[1]},
-      {text: 2, code: actionCodes[2]},
-      {text: 3, code: actionCodes[3]},
-      {text: '+', code: actionCodes.SUM},
+      {text: 1, code: actionCodes[1], class: 'bold'},
+      {text: 2, code: actionCodes[2], class: 'bold'},
+      {text: 3, code: actionCodes[3], class: 'bold'},
+      {text: '+', code: actionCodes.SUM, class: 'utility'},
     ],
     [
-      {text: '±', code: actionCodes.SGN_CH},
-      {text: 0, code: actionCodes[0]},
-      {text: '.', code: actionCodes.DOT},
-      {text: '=', code: actionCodes.EQ},
+      {text: '±', code: actionCodes.SGN_CH, class: 'utility'},
+      {text: 0, code: actionCodes[0], class: 'bold'},
+      {text: '.', code: actionCodes.DOT, class: 'bold'},
+      {text: '=', code: actionCodes.EQ, class: 'utility'},
     ],
   ];
   return (

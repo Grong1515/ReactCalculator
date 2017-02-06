@@ -1,13 +1,13 @@
 .calc.calculator {
   /*width: 300px;*/
   display: inline-block;
-  background-color: Silver;
-  min-width: 12em;
+  background-color: #dbdbdb;
+  min-width: 12rem;
   font-family: Verdana, Geneva, sans-serif;
 }
-.calc.calcutor:focus {
-  background-color: Blue;
-  outline: 1px solid red;
+.calc.calculator:focus {
+  background-color: #dbdbdb;
+  outline: none;
 }
 .calc.container {
 }
@@ -16,14 +16,14 @@
 }
 .calc.cell{
   display: inline-block;
-  padding: 0.5em;
+  padding: 0.5rem;
   -moz-user-select: none;
   user-select: none;
   cursor: default;
 }
 .calc.cell.button{
   width: 25%;
-  line-height: 2em;
+  line-height: 2rem;
   text-align: center;
 }
 .calc.cell.button:hover{
@@ -31,24 +31,27 @@
 }
 .calc.cell.formula {
   width: 100%;
-  min-height: 1em;
+  height: 3em;
   line-height: 1em;
   font-size: 0.7em;
   text-align: right;
-  padding: 1em;
-  background-color: gainsboro;
-  border: 1px solid darkgrey;
+  padding: 1rem;
+  background-color: #e5e5e5;
   overflow: hidden;
 }
 .calc.cell.input{
   width: 100%;
   max-width: 100%;
-  word-break: break-all;
-  word-wrap: break-word;
-  font-size: 1.5em;
+  height: 1em;
+  font-size: 2em;
   text-align: right;
-  background-color: aliceblue;
-  border-left: 1px solid darkgrey;
-  border-right: 1px solid darkgrey;
+  background-color: #e5e5e5;
   overflow-y: hidden;
+  padding-bottom: 0.5em;
+}
+.bold {
+  font-weight: bolder;
+}
+.utility {
+  font-size: 0.7em;
 }

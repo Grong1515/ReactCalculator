@@ -13,7 +13,7 @@ function AppModel(props) {
     <div>
       <div style={{display: 'inline-block'}}>
         <h1>JS Calculator!</h1>
-        <Calculator width="20%" onEval={props.handleCalculation} />
+        <Calculator width="230px" onEval={props.handleCalculation} />
       </div>
       <div style={{display: 'inline-block'}}>
         <ul>
