@@ -31,7 +31,7 @@ export default class Calculator extends React.Component {
     return <CalcModel onClick={this.handleClick}
       formula={this.state.string + (this.state.operation
                       ? ' ' + this.state.operation : '')}
-      input={this.state[this.state.input] || this.state.n1}
+      input={this.state[this.state.input]}
       style={{width: this.props.width || '25%'}} />;
   }
 }

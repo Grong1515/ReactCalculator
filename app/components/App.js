@@ -37,9 +37,13 @@ export default class App extends React.Component {
     fetch('/calculations', {
       method: 'POST',
       body: JSON.stringify({
-        calculation: formula,
+        calculation: formula.replace(/ /g, ''),
         date: new Date(),
       }),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
     }).then(res => {
       if (res.status == 200) {
         this.setState(MainReducer(this.state, actions.makeAction(actions.FETCH_EVAL_SUCC)));
