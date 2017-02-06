@@ -1,0 +1,58 @@
+.calc.calculator {
+  /*width: 300px;*/
+  display: inline-block;
+  background-color: Silver;
+  min-width: 12em;
+  font-family: Verdana, Geneva, sans-serif;
+  border:
+}
+.calc.container {
+  /*display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;*/
+}
+.calc.row{
+  /*width: 100%;*/
+  display: flex;
+  /*flex-direction: row;*/
+  /*justify-content: flex-start;*/
+  /*align-items: stretch;*/
+  /*align-content: stretch;*/
+}
+.calc.cell{
+  display: inline-block;
+  padding: 0.5em;
+  /*width: 2em;*/
+  /*height: 2em;*/
+  -moz-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.calc.cell.button{
+  width: 25%;
+  line-height: 2em;
+  text-align: center;
+}
+.calc.cell.button:hover{
+  background-color: Lavender;
+}
+.calc.cell.formula {
+  width: 100%;
+  min-height: 1em;
+  line-height: 1em;
+  font-size: 0.7em;
+  text-align: right;
+  padding: 1em;
+  background-color: gainsboro;
+  border: 1px solid darkgrey;
+}
+.calc.cell.input{
+  width: 100%;
+  font-size: 1.5em;
+  text-align: right;
+  background-color: aliceblue;
+  border-left: 1px solid darkgrey;
+  border-right: 1px solid darkgrey;
+}

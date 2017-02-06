@@ -1,0 +1,23 @@
+
+export const actionCodes = {
+    C: 'c',
+    CE: 'ce',
+    BS: 'backsp',
+    DIVISION: '/',
+    SUM: '+',
+    MULT: '*',
+    SUBTR: '-',
+    EQ: '=',
+    DOT: '.',
+    SGN_CH: 'sign_change',
+    0: String(0),
+    1: String(1),
+    2: String(2),
+    3: String(3),
+    4: String(4),
+    5: String(5),
+    6: String(6),
+    7: String(7),
+    8: String(8),
+    9: String(9),
+  };
