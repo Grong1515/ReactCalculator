@@ -118,6 +118,8 @@ export default function CalculatorReducer (state = initialState, action) {
 };
 
 function addNumberToString(string, numberStr) {
-  return (string !== '' ? string + ' ': '') + ((numberStr.indexOf('-') + 1) ?
-    '(' + numberStr + ')' : numberStr);
+  let number = (numberStr.indexOf('-') + 1) ?
+    '(' + numberStr + ')' : (isFinite(numberStr) && numberStr.trim() !== '' ? numberStr : '0');
+
+  return (string !== '' ? string + ' ': '') + number;
 };
