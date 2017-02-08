@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
   res.sendFile('views/index.html', { root: __dirname });
 });
 app.get('/calculations', function (req, res, next) {
-  db.Calculation.find({}, function (err, data) {
+  db.Calculation.find({}, {_id: 0, __v: 0}, function (err, data) {
     if (err) return res.sendStatus(500);
     res.send(data);
   });

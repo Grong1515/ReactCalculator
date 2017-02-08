@@ -11,7 +11,7 @@ export const initialState = {
   emptyStart: true,
 };
 
-export default function CalculatorReducer (state = initialState, action) {
+export default function CalculatorReducer (state = initialState, action = {}) {
   let newState;
   switch (action.type) {
     case actions.TYPE_NUMBER:
@@ -89,7 +89,7 @@ export default function CalculatorReducer (state = initialState, action) {
         string: '',
         operation: '',
         lastOperation: operation,
-        lastEval: state.string + operation,
+        lastEval: state.string + ' ' + operation,
         emptyStart: true,
       });
       break;
@@ -107,7 +107,7 @@ export default function CalculatorReducer (state = initialState, action) {
       });
       let newNum = newState[state.input].slice(0, -1);
       newState[state.input] =
-        (!newState[state.input] || !isFinite(newState[state.input]) || !isFinite(newNum)) ?
+        (newState[state.input].length < 2 || !isFinite(newState[state.input]) || !isFinite(newNum)) ?
           '0'
           : newNum;
       return newState;
