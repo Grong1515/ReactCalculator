@@ -19,7 +19,8 @@ gulp.task("webpack", function(callback) {
 
 gulp.task('serve', ['webpack', 'nodemon'], function() {
     browserSync.init({
-        proxy: "http://localhost:8088",
+      proxy: "http://localhost:8088",
+      // open: false,
     });
 
     gulp.watch(['views/**/*', 'public/**/*', 'server.js'], browserSync.reload);

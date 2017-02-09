@@ -12,13 +12,17 @@
 .calc.container {
 }
 .calc.row{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .calc.cell{
   display: inline-block;
   padding: 0.5rem;
   -moz-user-select: none;
-  user-select: none;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: default;
 }
 .calc.cell.button{
