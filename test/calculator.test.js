@@ -5,7 +5,7 @@ import CalculatorReducer from  '../app/components/calculator/reducer';
 import {actionCodes as ac} from '../app/components/calculator/config';
 
 
-function CalculateString(input, evaluation) {
+export function CalculateString(input, evaluation) {
   if (!(typeof input === 'string' || input.constructor === Array))
     throw new Error('Invalid input');
   evaluation = evaluation || Object.assign({}, CalculatorReducer());

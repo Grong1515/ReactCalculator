@@ -1,0 +1,185 @@
+exports[`test calculator snapshot 1`] = `
+<div
+  className="calc calculator"
+  onKeyDown={[Function]}
+  style={
+    Object {
+      "width": "25%",
+    }
+  }
+  tabIndex="0">
+  <div
+    className="calc container">
+    <div>
+      <div
+        className="calc row">
+        <div
+          className="calc cell formula"
+          data-code={undefined}
+          onClick={undefined}>
+          
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="calc row">
+        <div
+          className="calc cell input"
+          data-code={undefined}
+          onClick={undefined}>
+          2.134234234e-2
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="calc container">
+    <div>
+      <div
+        className="calc row">
+        <div
+          className="calc cell button utility"
+          data-code="ce"
+          onClick={[Function]}>
+          CE
+        </div>
+        <div
+          className="calc cell button utility"
+          data-code="c"
+          onClick={[Function]}>
+          C
+        </div>
+        <div
+          className="calc cell button utility"
+          data-code="backsp"
+          onClick={[Function]}>
+          ⇐
+        </div>
+        <div
+          className="calc cell button utility"
+          data-code="/"
+          onClick={[Function]}>
+          ÷
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="calc row">
+        <div
+          className="calc cell button bold"
+          data-code="7"
+          onClick={[Function]}>
+          7
+        </div>
+        <div
+          className="calc cell button bold"
+          data-code="8"
+          onClick={[Function]}>
+          8
+        </div>
+        <div
+          className="calc cell button bold"
+          data-code="9"
+          onClick={[Function]}>
+          9
+        </div>
+        <div
+          className="calc cell button utility"
+          data-code="*"
+          onClick={[Function]}>
+          *
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="calc row">
+        <div
+          className="calc cell button bold"
+          data-code="4"
+          onClick={[Function]}>
+          4
+        </div>
+        <div
+          className="calc cell button bold"
+          data-code="5"
+          onClick={[Function]}>
+          5
+        </div>
+        <div
+          className="calc cell button bold"
+          data-code="6"
+          onClick={[Function]}>
+          6
+        </div>
+        <div
+          className="calc cell button utility"
+          data-code="-"
+          onClick={[Function]}>
+          -
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="calc row">
+        <div
+          className="calc cell button bold"
+          data-code="1"
+          onClick={[Function]}>
+          1
+        </div>
+        <div
+          className="calc cell button bold"
+          data-code="2"
+          onClick={[Function]}>
+          2
+        </div>
+        <div
+          className="calc cell button bold"
+          data-code="3"
+          onClick={[Function]}>
+          3
+        </div>
+        <div
+          className="calc cell button utility"
+          data-code="+"
+          onClick={[Function]}>
+          +
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="calc row">
+        <div
+          className="calc cell button utility"
+          data-code="sign_change"
+          onClick={[Function]}>
+          ±
+        </div>
+        <div
+          className="calc cell button bold"
+          data-code="0"
+          onClick={[Function]}>
+          0
+        </div>
+        <div
+          className="calc cell button bold"
+          data-code="."
+          onClick={[Function]}>
+          .
+        </div>
+        <div
+          className="calc cell button utility"
+          data-code="="
+          onClick={[Function]}>
+          =
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

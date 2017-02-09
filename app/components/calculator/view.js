@@ -1,17 +1,17 @@
 import React from 'react';
 import {actionCodes, buttonsList} from './config.js';
 
-function Cell (props) {
+export function Cell (props) {
   return <div className={"calc cell " + props.className}
      onClick={props.onClick}
      data-code={props.code}>{props.text}</div>;
 }
 
-function Row (props) {
+export function Row (props) {
   return <div><div className="calc row">{props.children}</div></div>;
 }
 
-function Container (props) {
+export function Container (props) {
   return (
     <div className="calc container">
       {props.children}
@@ -19,7 +19,7 @@ function Container (props) {
   )
 }
 
-function Outputs (props) {
+export function Outputs (props) {
   return (
     <Container>
       <Row>
@@ -36,7 +36,7 @@ function Outputs (props) {
   );
 }
 
-function CalcButton (props) {
+export function CalcButton (props) {
 
   return <Cell
     className={'button ' + props.className }
@@ -45,7 +45,7 @@ function CalcButton (props) {
     onClick={props.onClick || null} />;
 }
 
-function CalcButtonRow (props) {
+export function CalcButtonRow (props) {
   var row = props.buttons.map((b, i) => {
     function onClick () {
       props.onClick(b.code)
@@ -58,7 +58,7 @@ function CalcButtonRow (props) {
   return <Row>{row}</Row>;
 }
 
-function Buttons (props) {
+export function Buttons (props) {
   return (
     <Container>
       {buttonsList.map((el, i) => (<CalcButtonRow buttons={el}
