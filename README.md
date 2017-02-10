@@ -20,7 +20,7 @@ This calculator uses eval() function, so the most of errors are the result of th
 
 When you click "=", entered string pass to eval(). It means that it will be handled depending on operation significance, so 2+2*2 equals 6.
 
-App requires installed mongoDB, if it can't connect to mongo server, then it will be wrote in terminal.
+App requires installed mongoDB, if it can't connect to mongo server, then it will be wrote in terminal and all requests that are using db will response with status of 500. They are: GET /calculations, POST /calculations.
 
 The bahavior of calculator is an attempt to copy the behavior of win10 calculator. For the design the same.
 
