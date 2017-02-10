@@ -49,6 +49,7 @@ export default class App extends React.Component {
         this.setState(MainReducer(this.state, actions.makeAction(actions.FETCH_EVAL_SUCC)));
         this.setState(MainReducer(this.state, actions.makeAction(actions.REQ_CALCULATIONS)));
       } else {
+        console.log('Request failed. Server error.');
         this.setState(MainReducer(this.state, actions.makeAction(actions.FETCH_EVAL_FAIL)));
       }
     })
